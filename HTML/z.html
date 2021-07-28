@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>浏览作品</title>
+    <style>
+       *{
+              margin: 0;
+              padding: 0;
+    }
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: '微软雅黑';
+        }
+        ul{
+            list-style: none;
+        }
+        h2{
+            width: 200px;
+            height: 100px;
+            font-size:35px;
+            /* font-family: '微软雅黑'; */
+            line-height: 100px;
+            text-align: center;
+            align-items: center;
+            margin: 10px auto;
+        }
+
+        .inner{
+            width: 380px;
+            height: 50px;
+            font-size:25px;
+            /* font-family: '微软雅黑'; */
+            line-height: 50px;
+            margin: 10px auto;
+        }
+
+        .inner li{
+            float: left;
+            margin-right: 25px;          
+        }
+
+    </style>
 </head>
 <body>
-    <div>zhao</div>
+    <header></header>
+    <main class="outer">
+       <h2>著名人物</h2>
+       <ul>
+       <div class="inner">
+        <li>全部</li>
+        <li>拼音A-Z</li>
+        <li>年代和分类</li>
+    </ul>  
+    </div>
+
+    </main>
+    <footer></footer>
+  
 </body>
 </html>
