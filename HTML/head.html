@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .top {
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            top: 0px;
+            background-color: #ddd;
+            z-index: 999;
+        }
+
+        .logo {
+            display: inline-block;
+            position: absolute;
+            margin-left: 20px;
+            width: 200px;
+            height: 60px;
+            background: url("http://cdn-g2.ltfc.net/cag_icon.svg") no-repeat;
+            background-size: 200px 60px;
+        }
+
+        .text {
+            position: absolute;
+            width: 550px;
+            height: 60px;
+            top: 0px;
+            left: 50%;
+            margin-left: -275px;
+        }
+
+        #text {
+            width: 498px;
+            height: 38px;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            float: left;
+            border-radius: 4px;
+        }
+
+        #sou {
+            width: 40px;
+            height: 40px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            float: left;
+            border-radius: 4px;
+            background: url("../images/huimg/fangda.jpg") no-repeat;
+            background-size: 40px 40px;
+        }
+
+        #text:hover,
+        #sou {
+            cursor: pointer;
+            border: 1px solid #aaa;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .topright {
+            width: 400px;
+            height: 60px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            line-height: 58px;
+            text-align: center;
+        }
+
+        .topright>a {
+            float: right;
+            color: #aaa;
+            border: 2px solid transparent;
+            margin-right: 20px;
+        }
+
+        .topright a:hover {
+            cursor: pointer;
+            border-bottom-color: tomato;
+            color: tomato;
+        }
+
+        a>img {
+            width: 16px;
+            height: 16px;
+            background: url("../images/huimg/lengdang.png");
+            background-size: 16px 16px;
+        }
+
+        .bg {
+            position: absolute;
+            z-index: -1;
+            top: 60px;
+            width: 100%;
+            height: 360px;
+            background: url("../images/huimg/top.png") no-repeat;
+            background-size: 100% 360px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #liebiao {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: url("../images/huimg/liebiao.png");
+            background-size: 60px 60px;
+        }
+
+        .lie {
+            font-size: 20px;
+            display: none;
+            position: absolute;
+            z-index: 1;
+            width: 300px;
+            height: 900px;
+            background-color: transparent;
+            color: transparent;
+        }
+
+
+        #liebiao:hover .lie {
+            display: block;
+            background-color: #eee;
+            color: #000;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .lie li {
+            margin-top: 30px;
+            margin-left: 80px;
+        }
+
+        .lie li:hover {
+            color: tomato;
+        }
+
+        li:nth-child(1) {
+            position: relative;
+            top: -30px;
+            right: 80px;
+            width: 300px;
+            height: 60px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        li:nth-child(1) img {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 0px;
+            left: 0px;
+        }
+
+        li img {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 40px;
+        }
+
+        .hu02 {
+            position: relative;
+            left: 0px;
+            width: 220px;
+            height: 1px;
+            background-color: #aaa;
+        }
+
+        .cir {
+            position: relative;
+            z-index: -1;
+            right: 60px;
+            top: 70px;
+            width: 280px;
+            height: 60px;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+            background-color: rgb(225, 240, 159);
+        }
+
+        .humain {
+            width: 1200px;
+            height: 2000px;
+            background-color: antiquewhite;
+            position: absolute;
+            top: 480px;
+            left: 50%;
+            margin-left: -600px;
+        }
+
+        /*000*/
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <div id="liebiao">
+            <div class="lie">
+                <ul>
+                    <li><img src="../images/huimg/liebiao.png">&nbsp;</li>
+                    <!-- <li class="cir">&nbsp;</li> -->
+                    <li><img src="../images/huimg/xiaofangzi.png">首页</li>
+                    <li><img src="../images/huimg/danren.png">艺术家</li>
+                    <li><img src="../images/huimg/duoren.png">拾英计划</li>
+                    <li><img src="../images/huimg/wenben.png">文章</li>
+                    <li><img src="../images/huimg/shutie.png">书籍和碑帖</li>
+                    <li><img src="../images/huimg/tupian.png">文物和工艺品</li>
+                    <li><img src="../images/huimg/fangzi.png">西方绘画</li>
+                    <li class="hu02">&nbsp;</li>
+                    <li><img src="../images/huimg/danren.png">个人信息</li>
+                    <li><img src="../images/huimg/ditu.png">浏览足迹</li>
+                    <li><img src="../images/huimg/wujiaoxin.png">收藏间</li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo"></div>
+        <div class="text">
+            <input type="text" id="text" placeholder="请输入作品名称,艺术家名称,或者是作品相关信息">
+            <input type="button" id="sou" name="shousuo">
+        </div>
+        <div class="topright">
+            <a href="">登录</a>
+            <a href="">
+                <img src="../images/huimg/lengdang.png">
+            </a>
+            <a href="">访问老版本</a>
+            <a href="">浏览作品</a>
+            <a href="">首页</a>
+        </div>
+    </header>
+
+    <div class="bg"></div>
+    <div class="humain"></div>
+</body>
+
+</html>
