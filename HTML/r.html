@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            width: 100%;
+            height: 100%;
+            float: left;
+            background: url(images/r1.png) repeat;
+        }
+        div.w{
+            width: 100%;
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+        }
+       .s{
+            float: left;
+            color: rgb(165, 165, 165);
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .s1{
+            color: rgb(165, 165, 165);
+            float: right;
+            margin: 10px;
+        }
+        p{
+            font-size: 20px;
+        }
+        div .s:hover {
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+        }
+        div .s1:hover {
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+        }
+        div.y1{
+            width: 155px;
+            height: 202px;
+            background: url(images/head-icon.png);
+            margin: auto;
+        }
+        [type="text"]{
+            width: 320px;
+            height: 40px;
+            font-size: 20px;
+        }
+        [type="button"]{
+          width: 80px;
+          height: 40px;
+        }
+        div.y2{
+            width: 400px;
+            height: 40px;
+            margin: auto;
+            background: white;
+            position: relative;
+        }
+        #j{
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            border: none;
+        }
+        div.y3{
+            width: 600px;
+            height: 130px;
+            background: url(images/r2.jpg);
+            /* position: absolute; */
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 200px;
+        }
+        .y3:hover{
+            cursor: pointer;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            float: left;
+            border: 1px dashed rgb(59, 174, 240);
+            margin: auto;
+        }
+        .top1{
+            float: left;
+            width: 160px;
+            height: 45.2px;
+            background: rgb(78, 198, 235);
+            text-align: center;
+            line-height: 45.2px;
+            font-weight: bold;
+            color: #fff;
+            font-size: 20px;
+        }
+        .top1:hover{
+            cursor: pointer;
+            background-color: rgb(71, 152, 184);
+        }
+        .top2{
+            float:right ;
+            width: 111.56px;
+            height: 34px;
+            background: rgb(58, 118, 197);
+            text-align: center;
+            line-height: 34px;
+            font-weight: bold;
+            position: relative;
+            color: #fff;
+        }
+        .top2:hover{
+            cursor: pointer;
+            background-color: rgb(55, 81, 228);
+        }
+    </style>
+</head>
+<body>
+    <div class="w">
+        <div class="s"><p>中华珍宝箱</p></div>
+        <div class="s">首页</div>
+        <div class="s">精选馆</div>
+        <div class="s">当代拾英</div>
+        <div class="s">新发图</div>
+        <div class="s1">登录</div>
+    </div>
+    <div>
+        <div class="y1"></div>
+        <div class="y2">
+            <form action="#">
+                <input type="text" name="" id="">
+                <span class="glyphicon glyphicon-search"></span>
+                <select name=""id="j">
+                    <option value=""selected>书画</option>
+                    <option value="">拾英计划</option>
+                    <option value="">创作素材</option>
+                    <option value="">书籍</option>
+                    <option value="">西方艺术</option>
+                </select>
+            </form>
+        </div>
+        <div class="y3"></div>
+    </div>
+   <div>
+       <div>
+           <div class="top1">精品馆</div>
+           <div class="top2">观赏更多…</div>
+       </div>
+       <div class="container">
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+       </div>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
