@@ -18,14 +18,190 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
             font-family: '微软雅黑';
             
         }
-        /* .head2 {
+        .top {
             position: fixed;
+            width: 100%;
+            height: 60px;
             top: 0px;
-            z-index: 9;
-        } */
+            background-color: #ddd;
+            z-index: 999;
+        }
+
+        .logo {
+            display: inline-block;
+            position: absolute;
+            margin-left: 20px;
+            width: 200px;
+            height: 60px;
+            background: url("http://cdn-g2.ltfc.net/cag_icon.svg") no-repeat;
+            background-size: 200px 60px;
+        }
+
+        .text {
+            position: absolute;
+            width: 550px;
+            height: 60px;
+            top: 0px;
+            left: 50%;
+            margin-left: -275px;
+        }
+
+        #text {
+            width: 498px;
+            height: 38px;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            float: left;
+            border-radius: 4px;
+        }
+
+        #sou {
+            width: 40px;
+            height: 40px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            float: left;
+            border-radius: 4px;
+            background: url("../images/huimg/fangda.jpg") no-repeat;
+            background-size: 40px 40px;
+        }
+
+        #text:hover,
+        #sou {
+            cursor: pointer;
+            border: 1px solid #aaa;
+        }
+
+        .topright {
+            width: 400px;
+            height: 60px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            line-height: 58px;
+            text-align: center;
+        }
+
+        .topright>a {
+            float: right;
+            color: #aaa;
+            border: 2px solid transparent;
+            margin-right: 20px;
+        }
+
+        .topright a:hover {
+            cursor: pointer;
+            border-bottom-color: tomato;
+            color: tomato;
+        }
+
+        a>img {
+            width: 16px;
+            height: 16px;
+            background: url("../images/huimg/lengdang.png");
+            background-size: 16px 16px;
+        }
+
+        #liebiao {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: url("../images/huimg/liebiao.png");
+            background-size: 60px 60px;
+        }
+
+        .lie {
+            font-size: 20px;
+            display: none;
+            position: absolute;
+            z-index: 1;
+            width: 300px;
+            height: 900px;
+            background-color: transparent;
+            color: transparent;
+        }
+
+
+        #liebiao:hover .lie {
+            display: block;
+            background-color: #eee;
+            color: #000;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .lie li {
+            margin-top: 30px;
+            margin-left: 80px;
+        }
+
+        .lie li:hover {
+            color: tomato;
+        }
+
+        .lie li:nth-child(1) {
+            position: relative;
+            top: -30px;
+            right: 80px;
+            width: 300px;
+            height: 60px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .lie li:nth-child(1) img {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 0px;
+            left: 0px;
+        }
+
+        li img {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 40px;
+        }
+
+        .hu02 {
+            position: relative;
+            left: 0px;
+            width: 220px;
+            height: 1px;
+            background-color: #aaa;
+        }
+
+        .cir {
+            position: relative;
+            z-index: -1;
+            right: 60px;
+            top: 70px;
+            width: 280px;
+            height: 60px;
+            border-bottom-left-radius: 30px;
+            border-top-left-radius: 30px;
+            background-color: rgb(225, 240, 159);
+        }
+
+        .humain {
+            width: 1200px;
+            height: 2000px;
+            background-color: antiquewhite;
+            position: absolute;
+            top: 480px;
+            left: 50%;
+            margin-left: -600px;
+        }
+
+        a {
+            text-decoration: none;
+        }
         .foot2 {
             position:relative;
             top: 950px;
@@ -47,9 +223,13 @@
             margin: 1px auto;
         }
         .tit{
-            width: 300px;
-            height: 155px;
+            width: 400px;
+            height:200px;
             margin:10px auto;
+            /* border: 1px solid red; */
+        }
+        ul{
+            list-style: none;
         }
         h2{
             width: 200px;
@@ -61,9 +241,7 @@
             align-items: center;
             margin: 10px auto;
         }
-        ul{
-            list-style: none;
-        }
+   
         .inner{
               width: 300px;
               height: 50px;
@@ -71,10 +249,11 @@
               margin: 10px auto;
         }
         .inner li{
+              font-size: 20px;
               float: left;
               margin-left: 20px;          
         } 
-        li:hover{
+        .inner li:hover{
             color: rgb(255, 200, 80);
             font-size: 25px;
             cursor: default;
@@ -146,7 +325,7 @@
              height: 360px;
              float: right;
         }
-       .p1 ,.p2,.p3,.p4{
+        .p1 ,.p2,.p3,.p4{
             width: 100px;
             height: 50px;
             line-height: 50px;
@@ -156,92 +335,123 @@
             font-family:'微软雅黑';
             margin: 10px  auto;
         }
-       .img {
-           width: 500px;
-           height:275px;
-           margin: 0 auto;
-           display: none;
-           margin: 10px auto;
-       }
-       .imgbox1,.imgbox2,.imgbox3,.imgbox4 {
-          border-top: 2px solid cadetblue;
-          width: 520px;
-          height: 320px;
-          margin: 0 auto;
-      }
-       p:hover{
-          font-size: 25px;
-          color: rgb(255, 200, 80);
-          transition: 0.2s all linear;
-          cursor: default;
-          border-bottom: 2px solid rgb(255, 200, 80);
-      }
-      .ant-span-2{
-          width:1200px;
-          height: 500px;
-      }
-      .wenzhang{
-          width: 1200px;
-          height: 450px;
-          float: left;
-      }
-      .w1{
-          width:50px;
-          height:40px;
-          font-size: 20px;
-          margin-left: 15px;
-      }
+        .img {
+            width: 500px;
+            height:275px;
+            margin: 0 auto;
+            display: none;
+            margin: 10px auto;
+        }
+        .imgbox1,.imgbox2,.imgbox3,.imgbox4 {
+            border-top: 2px solid cadetblue;
+            width: 520px;
+            height: 320px;
+            margin: 0 auto;
+        }
+        p:hover{
+            font-size: 25px;
+            color: rgb(255, 200, 80);
+            transition: 0.2s all linear;
+            cursor: default;
+            border-bottom: 2px solid rgb(255, 200, 80);
+        }
+        .ant-span-2{
+            width:1200px;
+            height: 500px;
+        }  
+        .wenzhang{
+            width: 1200px;
+            height: 450px;
+            float: left;
+        }
+        .w1{
+            width:50px;
+            height:40px;
+            font-size: 20px;
+            margin-left: 15px;
+        }
      
       
-      .right-banner1, .right-banner2 ,.right-banner3{
-        height:450px;
-        width: 100%;
-        margin: auto;
-       
-    } 
-
-    #carousel-example-generic1 ,#carousel-example-generic2,#carousel-example-generic3 {
-        width: 100%;
-        height:400px;
-        float: center;
-
-    }
-
-    #carousel-example-generic1 img {
-        width: 500px;
-        height: 400px;
-        margin: 1px auto;
-    }
+        .right-banner1, .right-banner2 ,.right-banner3{
+            height:450px;
+            width: 100%;
+            margin: auto;
+           
+        } 
     
-    #carousel-example-generic2 img {
-        width: 500px;
-        height: 395px;
-        margin: 0px auto;
-    }
-    #carousel-example-generic3 img {
-        width: 500px;
-        height: 395px;
-        margin: 0px auto;
-    }
-    .carousel-caption{
-        font-size: 15px;
-        color: blanchedalmond;
-        position: absolute;
-        top: 250px;
-    }
-      .shufa{
-          width: 1200px;
-          height: 450px;
-          float: right;
-      }
-     
+        #carousel-example-generic1 ,#carousel-example-generic2,#carousel-example-generic3 {
+            width: 100%;
+            height:400px;
+            float: center;
+    
+        }
+    
+        #carousel-example-generic1 img {
+            width: 500px;
+            height: 400px;
+            margin: 1px auto;
+        }
+        
+        #carousel-example-generic2 img {
+            width: 500px;
+            height: 395px;
+            margin: 0px auto;
+        }
+        #carousel-example-generic3 img {
+            width: 500px;
+            height: 395px;
+            margin: 0px auto;
+        }
+        .carousel-caption{
+            font-size: 15px;
+            color: blanchedalmond;
+            position: absolute;
+            top: 250px;
+        }
+          .shufa{
+              width: 1200px;
+              height: 450px;
+              float: right;
+        }
+         
 
     </style>
 </head>
 <body>
-    <!-- <header>
-        <iframe src="./head.html" class="head2" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>  
-    </header> -->
+    <header class="top">
+        <div id="liebiao">
+            <div class="lie">
+                <ul>
+                    <li><img src="../images/huimg/liebiao.png">&nbsp;</li>
+                    <li><img src="../images/huimg/xiaofangzi.png">首页</li>
+                    <li><img src="../images/huimg/danren.png">艺术家</li>
+                    <li><img src="../images/huimg/duoren.png">拾英计划</li>
+                    <li><img src="../images/huimg/wenben.png">文章</li>
+                    <li><img src="../images/huimg/shutie.png">书籍和碑帖</li>
+                    <li><img src="../images/huimg/tupian.png">文物和工艺品</li>
+                    <li><img src="../images/huimg/fangzi.png">西方绘画</li>
+                    <li class="hu02">&nbsp;</li>
+                    <li><img src="../images/huimg/danren.png">个人信息</li>
+                    <li><img src="../images/huimg/ditu.png">浏览足迹</li>
+                    <li><img src="../images/huimg/wujiaoxin.png">收藏间</li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo"></div>
+        <div class="text">
+            <input type="text" id="text" placeholder="请输入作品名称,艺术家名称,或者是作品相关信息">
+            <input type="button" id="sou" name="shousuo">
+        </div>
+        <div class="topright">
+            <a href="">登录</a>
+            <a href="">
+                <img src="../images/huimg/lengdang.png">
+            </a>
+            <a href="">访问老版本</a>
+            <a href="">浏览作品</a>
+            <a href="">首页</a>
+        </div>
+    </header>
     <div class="main">
         <div class="outer">
             <div class="tit">
@@ -518,7 +728,7 @@
         }
         // 每次只有一张图片显示
         imgbox1[index].style.display = 'block';
-    }
+        }
          // 定时器，间隔1s切换图片
         setInterval(slideShow, 2000);
 </script>
@@ -558,7 +768,7 @@ function slideShow() {
     }
     // 每次只有一张图片显示
     imgbox3[index].style.display = 'block';
-}
+    }
      // 定时器，间隔1s切换图片
     setInterval(slideShow, 1000);
 </script>
@@ -578,11 +788,11 @@ function slideShow() {
     }
     // 每次只有一张图片显示
     imgbox4[index].style.display = 'block';
-}
-// 定时器，间隔1s切换图片
-setInterval(slideShow, 2000);
-
-</script>
+    }
+    // 定时器，间隔1s切换图片
+    setInterval(slideShow, 2000);
+    
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
