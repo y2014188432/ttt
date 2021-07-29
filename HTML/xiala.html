@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #liebiao {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: url("../images/huimg/liebiao.png");
+            background-size: 60px 60px;
+        }
+
+        .lie {
+            font-size: 20px;
+            display: none;
+            position: absolute;
+            z-index: 1;
+            width: 300px;
+            height: 100%;
+            color: transparent;
+            background-color: aqua;
+        }
+
+
+        #liebiao:hover .lie {
+            display: block;
+            background-color: #eee;
+            color: #000;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .lie li {
+            margin-top: 30px;
+            margin-left: 80px;
+        }
+
+        .lie li:hover {
+            color: tomato;
+        }
+
+        .lie li:nth-child(1) {
+            position: relative;
+            top: -30px;
+            right: 80px;
+            width: 300px;
+            height: 60px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .lie li:nth-child(1) img {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 0px;
+            left: 0px;
+        }
+
+        li img {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 40px;
+        }
+
+        .hu02 {
+            position: relative;
+            left: 0px;
+            width: 220px;
+            height: 1px;
+            background-color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="liebiao">
+        <div class="lie">
+            <ul>
+                <li><img src="../images/huimg/liebiao.png">&nbsp;</li>
+                <!-- <li class="cir">&nbsp;</li> -->
+                <li><img src="../images/huimg/xiaofangzi.png">首页</li>
+                <li><img src="../images/huimg/danren.png">艺术家</li>
+                <li><img src="../images/huimg/duoren.png">拾英计划</li>
+                <li><img src="../images/huimg/wenben.png">文章</li>
+                <li><img src="../images/huimg/shutie.png">书籍和碑帖</li>
+                <li><img src="../images/huimg/tupian.png">文物和工艺品</li>
+                <li><img src="../images/huimg/fangzi.png">西方绘画</li>
+                <li class="hu02">&nbsp;</li>
+                <li><img src="../images/huimg/danren.png">个人信息</li>
+                <li><img src="../images/huimg/ditu.png">浏览足迹</li>
+                <li><img src="../images/huimg/wujiaoxin.png">收藏间</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
