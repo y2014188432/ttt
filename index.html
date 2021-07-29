@@ -13,12 +13,6 @@
             padding: 0;
         }
 
-        html,
-        body {
-            height: 100%;
-            position: relative;
-        }
-
         .bg {
             position: absolute;
             z-index: -1;
@@ -35,29 +29,25 @@
 
         .head2 {
             position: fixed;
+            top: 0px;
             z-index: 9;
         }
 
         .foot2 {
             position: relative;
-            top: 4200px;
         }
 
         .humain {
+            display: block;
             width: 1202px;
-            height: 3600px;
+            height: 3650px;
             border: 1px solid green;
-            position: absolute;
-            top: 500px;
-            left: 50%;
-            margin-left: -600px;
-
+            margin: 500px auto;
         }
 
         .pic1 {
             width: 1200px;
             height: 512px;
-            background-color: yellow;
             margin-bottom: 60px;
         }
 
@@ -74,6 +64,7 @@
         }
 
         .hua {
+            width: 100px;
             position: relative;
             right: -1100px;
             bottom: 16px;
@@ -234,14 +225,18 @@
         }
 
         .hub {
+            width: 100px;
             position: relative;
             right: -1100px;
             bottom: 16px;
         }
 
+        .hub a {
+            color: #aaa;
+        }
+
         .pic41 h2:hover {
             color: red;
-            /* cursor: pointer; */
         }
 
         .pic5 {
@@ -287,23 +282,266 @@
         }
 
         .pic6 {
+            position: relative;
             width: 1200px;
-            height: 400px;
+            height: 420px;
             margin-bottom: 60px;
-            background: pink;
+        }
+
+        .pic61::before {
+            content: "";
+            display: block;
+            width: 366px;
+            height: 420px;
+            background: url("./images/huimg/qita1.png");
+            background-size: 366px 480px;
+            border-radius: 10px;
+
+        }
+
+        .pic62::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 416px;
+            width: 366px;
+            height: 420px;
+            background: url("./images/huimg/qita2.png");
+            background-size: 366px 480px;
+            border-radius: 10px;
+
+        }
+
+        .pic63::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 366px;
+            height: 420px;
+            background: url("./images/huimg/qita3.png");
+            background-size: 366px 480px;
+            border-radius: 10px;
+
+        }
+
+        .pic6wen {
+            width: 366px;
+            height: 100px;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            bottom: 0px;
+            color: #fff;
+        }
+
+        .pic6wen1 {
+            width: 366px;
+            height: 100px;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            bottom: 0px;
+            left: 416px;
+            color: #fff;
+        }
+
+        .pic6wen2 {
+            width: 366px;
+            height: 100px;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            bottom: 0px;
+            right: 0px;
+            color: #fff;
         }
 
         .pic7 {
+            position: relative;
             width: 1200px;
-            height: 305px;
+            height: 420px;
             margin-bottom: 60px;
-            background-color: red;
+            font-size: 25px;
+            color: #fff;
+        }
+
+        .pic71::after {
+            text-align: center;
+            line-height: 800px;
+            content: "";
+            display: block;
+            width: 300px;
+            height: 420px;
+            background: url("./images/huimg/zhuti1.png");
+            background-size: 300px 420px;
+            border-radius: 10px;
+        }
+
+        .pic72::after {
+            content: "大雅之道·大雅堂历代复制品精选";
+            text-align: center;
+            line-height: 360px;
+            display: block;
+            width: 560px;
+            height: 200px;
+            position: absolute;
+            top: 0px;
+            left: 320px;
+            background: url("./images/huimg/zhuti2.png");
+            background-size: 560px 200px;
+            border-radius: 10px;
+        }
+
+        .pic73::after {
+            content: "";
+            display: block;
+            width: 560px;
+            height: 200px;
+            position: absolute;
+            bottom: 0px;
+            left: 320px;
+            background: url("./images/huimg/zhuti3.png");
+            background-size: 560px 200px;
+            border-radius: 10px;
+
+        }
+
+        .pic74::after {
+            content: "临安梦华工-两宋绘画的地理变迁特展";
+            text-align: center;
+            line-height: 800px;
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 300px;
+            height: 420px;
+            background: url("./images/huimg/zhuti4.png");
+            background-size: 560px 380px;
+            border-radius: 10px;
         }
 
         .pic8 {
             width: 1200px;
-            height: 305px;
+            height: 400px;
             margin-bottom: 60px;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .pic8 ul li {
+            margin-left: 32px;
+            margin-top: 10px;
+            float: left;
+            width: 160px;
+            height: 160px;
+            border-radius: 6px;
+        }
+
+        .huc a {
+            color: #aaa;
+        }
+
+        .pic8 li:nth-child(1) {
+            background: url("./images/huimg/xiaai.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(2) {
+            background: url("./images/huimg/xiayitong.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(3) {
+            background: url("./images/huimg/xiashanshui.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(4) {
+            background: url("./images/huimg/xiakaishu.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(5) {
+            background: url("./images/huimg/xiahangcao.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(6) {
+            background: url("./images/huimg/xiarenwu\ \(2\).png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(7) {
+            background: url("./images/huimg/xianaishou.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(8) {
+            background: url("./images/huimg/xiataoci.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(9) {
+            background: url("./images/huimg/xiaqingtong.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(10) {
+            background: url("./images/huimg/xiarenwu.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(11) {
+            background: url("./images/huimg/xiayouhau.png");
+            background-size: 160px 160px;
+        }
+
+        .pic8 li:nth-child(12) {
+            background: url("./images/huimg/xiabihua.png");
+            background-size: 160px 160px;
+        }
+
+        .pic1 li {
+            float: left;
+        }
+
+        .pic1 li:nth-child(1)::before {
+            content: "";
+            display: block;
+            height: 512px;
+            width: 350px;
+            background: url("./images/huimg/shang01.png") no-repeat;
+            background-size: 350px 512px;
+        }
+
+        .pic1 li:nth-child(2)::before {
+            content: "";
+            display: block;
+            height: 512px;
+            width: 500px;
+            background: url("./images/huimg/shang02.png") no-repeat;
+            background-size: 500px 512px;
+        }
+
+        .pic1 li:nth-child(3)::before {
+            content: "";
+            display: block;
+            height: 512px;
+            width: 350px;
+            background: url("./images/huimg/shang03.png") no-repeat;
+            background-size: 350px 512px;
+        }
+
+        .box {
+            margin: auto;
+            width: 1200px;
+            height: 20px;
             background-color: aqua;
         }
     </style>
@@ -318,7 +556,14 @@
     <iframe src="./HTML/head.html" class="head2" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
     <div class="bg"></div>
     <div class="humain">
-        <div class="pic1"></div>
+        <div class="pic1">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
         <div class="pic2">
             <h2>艺术家</h2>
             <p>你可能感兴趣的艺术家</p>
@@ -359,6 +604,7 @@
             <div></div>
             <div></div>
         </div>
+
         <div class="pic3">
             <div class="pic31"></div>
             <div class="pic32">
@@ -369,12 +615,11 @@
                 <p> 第一次揭开面纱，看见清楚的它——</p>
             </div>
         </div>
+
         <div class="pic4">
             <h2>拾英计划艺术家</h2>
-            <p>
-                参与拾英计划的当代艺术家</p>
+            <p>参与拾英计划的当代艺术家</p>
             <div class="hub"><a href="#">查看更多···</a></div>
-
             <div class="pic41">
                 <ul>
                     <li>
@@ -404,9 +649,8 @@
                     </li>
                 </ul>
             </div>
-            <div></div>
-            <div></div>
         </div>
+
         <div class="pic5">
             <div class="pic51">
                 <div class="pic511">
@@ -422,15 +666,52 @@
             </div>
         </div>
 
-        <div class="pic6">其他资料</div>
-        <div class="pic7">主题展览</div>
-        <div class="pic8">分类</div>
+        <div class="pic6">
+            <div class="pic61">
+                <h1></h1>
+                <div class="pic6wen">
+                    <h2>碑帖,书籍,画谱,印谱</h2>
+                </div>
+            </div>
+            <div class="pic62">
+                <div class="pic6wen1">
+                    <h2>油画,素描</h2>
+                </div>
+            </div>
+            <div class="pic63">
+                <div class="pic6wen2">
+                    <h2>文物素材照片</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="pic7">
+            <div class="pic71"></div>
+            <div class="pic72"></div>
+            <div class="pic73"></div>
+            <div class="pic74"></div>
+        </div>
+
+        <div class="pic8">
+            <h1>分类</h1>
+            <div class="huc"><a href="">查看更多···</a></div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
     </div>
-
-
-
-
-
     <iframe src="HTML/footer.html" class="foot2" width="100%" height="342px" frameBorder="0" scrolling="no"></iframe>
 </body>
 
