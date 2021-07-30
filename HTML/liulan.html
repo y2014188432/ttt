@@ -243,27 +243,72 @@
         }
    
         .inner{
-              width: 300px;
+              width: 400px;
               height: 50px;
               line-height: 50px;
               margin: 10px auto;
+              text-align: center;
         }
         .inner li{
+              width: 90px;
               font-size: 20px;
               float: left;
-              margin-left: 20px;          
+              margin-left: 10px;          
         } 
         .inner li:hover{
             color: rgb(255, 200, 80);
-            font-size: 25px;
+            /* font-size: 22px; */
             cursor: default;
             border-bottom: 2px solid  rgb(255, 200, 80);
             transition: 0.2s all linear;
+        }
+        label{
+             width: 50px;
+             height: 20px;
+             cursor: pointer;
+             transition: 0.5s;
+            }
+        .box{
+            width: 600px;
+            height: 100px;
+            margin:10px auto;
+            position: absolute;
+            left: 400px;
+            top: 150px;
+            display: none;
+        }
+        .box1{
+            width: 600px;
+            height: 100px;
+            margin:10px auto;
+            position: absolute;
+            left: 400px;
+            top: 150px;
+            display: none;
+        }
+        .box p{
+            font-size: 15px;
+            float: left;
+            margin-right: 15px;
+        }
+        .box1 p{
+            font-size: 15px;
+            float: left;
+            margin-right: 15px;
+        }
+        #r1:checked+.box {
+            display: block;
+           
+        }
+        #r2:checked+.box1 {
+            display: block;
+           
         }
         .sousuo{
             width: 400px;
             height: 100px;
             margin:20px auto;
+            /* position: absolute; */
         }
         .user-input { 
             width: 360px;
@@ -408,13 +453,59 @@
             position: absolute;
             top: 250px;
         }
-          .shufa{
+        .shufa{
               width: 1200px;
               height: 450px;
               float: right;
         }
-         
-
+        .XF{
+            width: 1100px;
+            height: 300px;
+            float: left;
+            /* border: 1px solid red; */
+            margin:20px auto;
+        } 
+        .x1, .x2, .x3, .x4{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            float: left;
+            margin: 30px;
+        }
+        .XF a{
+            font-size: 20px;
+            float: right;
+        }
+        .x1{
+            background:url(../images/xf/1.png) ;
+        }
+        .x2{
+            background:url(../images/xf/2.png) ;
+        }
+        .x3{
+            background:url(../images/xf/3.png) ;
+        }
+        .x4{
+            background:url(../images/xf/4.png) ;
+        }
+        .x1:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        .x2:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        .x3:hover:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        .x4:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        
     </style>
 </head>
 <body>
@@ -458,16 +549,25 @@
                 <h2>人物&作品</h2>
                 <ul>
                     <div class="inner">
-                       <li>全部</li>
-                       <li>拼音A-Z</li>
-                       <li>年代</li>
+                       <li><input type="radio" name="r" id="r0" checked>全部
+                       </li>
+                       <li><input type="radio" name="r" id="r1">拼音A-Z
+                        <div class="box">
+                            <p >A</p><p>B</p><p>C</p><p>D</p><p>E</p><p>F</p><p>G</p><p>H</p><p>I</p><p>G</p><p>K</p><p>L</p><p>M</p><p>N</p><p>O</p><p>P</p><p>Q</p><p>R</p><p>S</p><p>T</p><p>U</p><p>V</p><p>W</p>
+                        </div>
+                       </li>
+                       <li><input type="radio" name="r"  id="r2">年代
+                        <div class="box1">
+                        <p>先秦</p><p>汉</p><p>魏晋南北朝</p><p>宋</p><p>五代十国</p><p>元</p>明<P>清</P><P>当代 </P>
+                        </div>
+                       </li>
                        <li>分类</li>
                     </div>
                 </ul>  
             </div>
             <div class="sousuo">
                 <input class="user-input" type="text" name="search" placeholder="请输入艺术家名称，或者拼音简码">
-                <span class="glyphicon glyphicon-search" checked></span>
+                <span class="glyphicon glyphicon-search" checked></span> 
             </div>
             <div class="ant-spin">
                 <div class="ant-span-1">
@@ -635,7 +735,7 @@
                         </div>
                     </div>
                 <div class="shufa">
-                    <p class="w1">文物</p>
+                    <p class="w4">文物</p>
                     <div class="w2">
                         <div class="right-banner3">
                             <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
@@ -691,15 +791,18 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
-                           
                         </div>
                     </div>
                 </div>
-                
-
+            <div class="XF">
+                <p class="x">西方艺术</p> 
+                    <div class="x1"></div>
+                    <div class="x2"></div>
+                    <div class="x3"></div>
+                    <div class="x4"></div>
+                <a>.......</a>
             </div>
-     
-
+            </div>
         </div>
     </div>
  <footer>
@@ -736,19 +839,14 @@
     var imgbox2 = document.getElementsByClassName("img-slide2");
     len = imgbox2.length;
     imgbox2[index].style.display = 'block';
-    // 逻辑控制函数
     function slideShow() {
         index ++;
-        // 防止数组溢出
         if(index >= len) index = 0;
-        // 遍历每一个元素
         for(var i=0; i<len; i++) {
             imgbox2[i].style.display = 'none';
         }
-        // 每次只有一张图片显示
         imgbox2[index].style.display = 'block';
     }
-    // 定时器，间隔1s切换图片
     setInterval(slideShow, 1000);
 
 </script>
@@ -757,19 +855,14 @@ var index = 0, len;
 var imgbox3 = document.getElementsByClassName("img-slide3");
 len = imgbox3.length;
 imgbox3[index].style.display = 'block';
-// 逻辑控制函数
 function slideShow() {
     index ++;
-    // 防止数组溢出
     if(index >= len) index = 0;
-    // 遍历每一个元素
     for(var i=0; i<len; i++) {
         imgbox3[i].style.display = 'none';
     }
-    // 每次只有一张图片显示
     imgbox3[index].style.display = 'block';
     }
-     // 定时器，间隔1s切换图片
     setInterval(slideShow, 1000);
 </script>
 <script>
@@ -777,19 +870,14 @@ function slideShow() {
 var imgbox4 = document.getElementsByClassName("img-slide4");
 len = imgbox4.length;
 imgbox4[index].style.display = 'block';
-// 逻辑控制函数
 function slideShow() {
     index ++;
-    // 防止数组溢出
     if(index >= len) index = 0;
-    // 遍历每一个元素
     for(var i=0; i<len; i++) {
         imgbox4[i].style.display = 'none';
     }
-    // 每次只有一张图片显示
     imgbox4[index].style.display = 'block';
     }
-    // 定时器，间隔1s切换图片
     setInterval(slideShow, 2000);
     
     </script>

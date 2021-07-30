@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title>拾英计划</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        a {
+            text-decoration: none;
+        }
+
+        .head2 {
+            position: fixed;
+            top: 0px;
+            z-index: 9;
+        }
+        .foot2 {
+            position: relative;
+            top: 2000px;
+        }
+        .main{
+           width: 100%;
+           height: 2000px;
+           /* position: absolute; */
+        }
+        .alin{
+            width: 1200px;
+            height: 2000px;
+            margin: 60px auto;
+            background-color: rgb(225, 240, 159);
+        }
+        .alin-span1{
+                   width: 1200px;
+                   height: 100px;
+        }
+        .alin p{
+            width: 250px;
+            height: 100px;
+            /* border: 1px solid red; */
+            font-size: 30px;
+            line-height: 100px;
+            list-style: center;
+            margin: 10px auto;
+            letter-spacing: 2px;
+
+        }
+        .alin-span2{
+            width: 250px;
+            height: 50px;
+            margin: 10px auto;
+        }
+        ul{
+            list-style: none;
+        }
+        .biao1 li{
+            width: 80px;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+            font-size: 15px;
+            margin-right: 40px;
+        }
+        .sousuo{
+            width: 400px;
+            height: 100px;
+            margin:20px auto;
+        }
+        .user-input { 
+            width: 360px;
+            height: 30px;
+            border: 2px solid #eee;
+            border-radius: 5px; 
+            box-sizing: border-box; 
+            outline: none; 
+            text-indent: 10px; 
+        }
+        span{
+             width: 30px;
+             height: 30px;
+             border: 5px solid transparent;
+             color: #eee;
+        }
+        li:hover{
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <iframe src="./head.html" class="head2" width="100%" height="60px" frameBorder="0" scrolling="no"></iframe>
+    <iframe src="./xiala.html" class="head2" width="300px" height="100%" frameBorder="0" scrolling="no"></iframe>
+    </header>
+    <div class="mian">
+        <div class="alin">
+            <div class="alin1">
+                <div class="alin-span1">
+                    <p> <strong>拾英计划艺术家</strong></p>
+                </div>
+                <div class="alin-span2">
+                    <ul class="biao1">
+                        <li>全部</li>
+                        <li>
+                            拼音A-Z
+                        </li>
+                    </ul>
+                </div>
+                <div class="sousuo"> 
+                    <input class="user-input" type="text" name="search" placeholder="请输入艺术家名称，或者拼音简码">
+                    <span class="glyphicon glyphicon-search" checked></span> 
+                </div>
+            </div>
+        </div>   
+    </div>
+    <footer>
+        <iframe src="./footer.html" class="foot2" width="100%" height="342px" frameBorder="0" scrolling="no"></iframe>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+</html>
