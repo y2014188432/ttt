@@ -1,75 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <title>Document</title>
     <style>
-        *{margin: 0;padding: 0;}
-        body{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
             width: 100%;
             height: 100%;
             float: left;
             background: url(../images/huimg/r1.png) repeat;
         }
-        div.w{
+
+        div.w {
             width: 100%;
             height: 50px;
             background-color: rgb(0, 0, 0);
         }
-       .s{
+
+        .s {
             float: left;
             color: rgb(165, 165, 165);
             justify-content: space-between;
             margin: 10px;
         }
-        .s1{
+
+        .s1 {
             color: rgb(165, 165, 165);
             float: right;
             margin: 10px;
         }
-        p{
+
+        p {
             font-size: 20px;
         }
+
         div .s:hover {
             cursor: pointer;
             color: rgb(255, 255, 255);
         }
+
         div .s1:hover {
             cursor: pointer;
             color: rgb(255, 255, 255);
         }
-        div.y1{
+
+        div.y1 {
             width: 155px;
             height: 202px;
             background: url(../images/huimg/head-icon.png);
             margin: auto;
         }
-        [type="text"]{
+
+        [type="text"] {
             width: 320px;
             height: 40px;
             font-size: 20px;
         }
-        [type="button"]{
-          width: 80px;
-          height: 40px;
+
+        [type="button"] {
+            width: 80px;
+            height: 40px;
         }
-        div.y2{
+
+        div.y2 {
             width: 400px;
             height: 40px;
             margin: auto;
             background: white;
             position: relative;
         }
-        #j{
+
+        #j {
             width: 50px;
             height: 40px;
             position: absolute;
             border: none;
         }
-        div.y3{
+
+        div.y3 {
             width: 600px;
             height: 130px;
             background: url(../images/huimg/r2.jpg);
@@ -78,17 +96,20 @@
             margin-top: 40px;
             margin-bottom: 200px;
         }
-        .y3:hover{
+
+        .y3:hover {
             cursor: pointer;
         }
-        .container{
+
+        .container {
             width: 100%;
             height: 100%;
             float: left;
             border: 1px dashed rgb(59, 174, 240);
             margin: auto;
         }
-        .top1{
+
+        .top1 {
             float: left;
             width: 160px;
             height: 45.2px;
@@ -99,12 +120,14 @@
             color: #fff;
             font-size: 20px;
         }
-        .top1:hover{
+
+        .top1:hover {
             cursor: pointer;
             background-color: rgb(71, 152, 184);
         }
-        .top2{
-            float:right ;
+
+        .top2 {
+            float: right;
             width: 111.56px;
             height: 34px;
             background: rgb(58, 118, 197);
@@ -114,27 +137,31 @@
             position: relative;
             color: #fff;
         }
-        .top2:hover{
+
+        .top2:hover {
             cursor: pointer;
             background-color: rgb(55, 81, 228);
         }
-        .pc1{
+
+        .pc1 {
             width: 45%;
             height: 100%;
             float: left;
             margin: 10px;
             min-width: 480px;
             min-height: 260px;
-            background:linear-gradient( 0deg,rgb(143, 140, 140) 0%,rgb(0, 0, 0) 50%) ;
+            background: linear-gradient(0deg, rgb(143, 140, 140) 0%, rgb(0, 0, 0) 50%);
             position: relative;
         }
+
         li {
             list-style: none;
         }
-		.m1 {
+
+        .m1 {
             filter: alpha(opacity=40);
-	        background-color: rgb(0, 0, 0);
-	        background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
             filter: alpha(opacity=40);
             height: 40px;
             width: 300px;
@@ -143,42 +170,48 @@
             position: absolute;
             top: 0px;
             left: 20px;
-            
+
         }
+
         .m1 li {
             line-height: 1.8;
             color: rgb(216, 212, 212);
         }
+
         .m1:hover ul {
             cursor: pointer;
             animation: RST 10s 0.6s linear infinite;
         }
+
         @keyframes RST {
-                0% {
-                    transform: translateY(0);
-                }
-                100% {
-                    transform: translateY(-100%);
-                }
+            0% {
+                transform: translateY(0);
             }
 
-        .pc2{
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .pc2 {
             width: 45%;
             height: 100%;
             float: right;
             margin: 10px;
             min-width: 480px;
             min-height: 260px;
-            background:linear-gradient( 0deg,rgb(143, 140, 140) 0%,rgb(0, 0, 0) 50%) ;
+            background: linear-gradient(0deg, rgb(143, 140, 140) 0%, rgb(0, 0, 0) 50%);
             position: relative;
         }
+
         li {
             list-style: none;
         }
-		.m2 {
+
+        .m2 {
             filter: alpha(opacity=40);
-	        background-color: rgb(0, 0, 0);
-	        background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
             filter: alpha(opacity=40);
             height: 40px;
             width: 300px;
@@ -188,15 +221,18 @@
             top: 0px;
             left: 20px;
         }
+
         .m2 li {
             line-height: 1.8;
             color: rgb(216, 212, 212);
         }
+
         .m2:hover ul {
             cursor: pointer;
             animation: RST 10s 0.6s linear infinite;
         }
-        .zh1{
+
+        .zh1 {
             width: 100%;
             height: 60%;
             background: url(../images/huimg/r3.jpeg) no-repeat;
@@ -205,7 +241,8 @@
             min-height: 160px;
             margin: 12.5% auto;
         }
-        .zh2{
+
+        .zh2 {
             width: 100%;
             height: 60%;
             background: url(../images/huimg/r4.jpg) no-repeat;
@@ -214,14 +251,16 @@
             min-height: 160px;
             margin: 12.5% auto;
         }
-        .container1{
+
+        .container1 {
             width: 100%;
             height: 100%;
             float: left;
             border: 1px dashed rgb(59, 174, 240);
             margin: auto;
         }
-        .top3{
+
+        .top3 {
             float: left;
             width: 160px;
             height: 45.2px;
@@ -232,12 +271,14 @@
             color: #fff;
             font-size: 20px;
         }
-        .top3:hover{
+
+        .top3:hover {
             cursor: pointer;
             background-color: rgb(71, 152, 184);
         }
-        .top4{
-            float:right ;
+
+        .top4 {
+            float: right;
             width: 111.56px;
             height: 34px;
             background: rgb(58, 118, 197);
@@ -247,27 +288,31 @@
             position: relative;
             color: #fff;
         }
-        .top4:hover{
+
+        .top4:hover {
             cursor: pointer;
             background-color: rgb(55, 81, 228);
         }
-        .pc3{
+
+        .pc3 {
             width: 45%;
             height: 100%;
             float: left;
             margin: 10px;
             min-width: 480px;
             min-height: 260px;
-            background:linear-gradient( 0deg,rgb(143, 140, 140) 0%,rgb(0, 0, 0) 50%) ;
+            background: linear-gradient(0deg, rgb(143, 140, 140) 0%, rgb(0, 0, 0) 50%);
             position: relative;
         }
+
         li {
             list-style: none;
         }
-		.m3 {
+
+        .m3 {
             filter: alpha(opacity=40);
-	        background-color: rgb(0, 0, 0);
-	        background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
             filter: alpha(opacity=40);
             height: 40px;
             width: 300px;
@@ -277,31 +322,36 @@
             top: 0px;
             left: 20px;
         }
+
         .m3 li {
             line-height: 1.8;
             color: rgb(216, 212, 212);
         }
+
         .m3:hover ul {
             cursor: pointer;
             animation: RST 10s 0.6s linear infinite;
         }
-        .pc4{
+
+        .pc4 {
             width: 45%;
             height: 100%;
             float: right;
             margin: 10px;
             min-width: 480px;
             min-height: 260px;
-            background:linear-gradient( 0deg,rgb(143, 140, 140) 0%,rgb(0, 0, 0) 50%) ;
+            background: linear-gradient(0deg, rgb(143, 140, 140) 0%, rgb(0, 0, 0) 50%);
             position: relative;
         }
+
         li {
             list-style: none;
         }
-		.m4 {
+
+        .m4 {
             filter: alpha(opacity=40);
-	        background-color: rgb(0, 0, 0);
-	        background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
             filter: alpha(opacity=40);
             height: 40px;
             width: 300px;
@@ -311,15 +361,18 @@
             top: 0px;
             left: 20px;
         }
+
         .m4 li {
             line-height: 1.8;
             color: rgb(216, 212, 212);
         }
+
         .m4:hover ul {
             cursor: pointer;
             animation: RST 10s 0.6s linear infinite;
         }
-        .zh3{
+
+        .zh3 {
             width: 100%;
             height: 50%;
             background: url(../images/huimg/r5.jpg) no-repeat;
@@ -328,7 +381,8 @@
             min-height: 160px;
             margin: 12.5% auto;
         }
-        .zh4{
+
+        .zh4 {
             width: 100%;
             height: 50%;
             background: url(../images/huimg/r6.jpg) no-repeat;
@@ -337,14 +391,16 @@
             min-height: 160px;
             margin: 12.5% auto;
         }
-        .container2{
+
+        .container2 {
             width: 100%;
             height: 100%;
             float: left;
             border: 1px dashed rgb(59, 174, 240);
             margin: auto;
         }
-        .top5{
+
+        .top5 {
             float: left;
             width: 160px;
             height: 45.2px;
@@ -355,12 +411,14 @@
             color: #fff;
             font-size: 20px;
         }
-        .top5:hover{
+
+        .top5:hover {
             cursor: pointer;
             background-color: rgb(71, 152, 184);
         }
-        .top6{
-            float:right ;
+
+        .top6 {
+            float: right;
             width: 111.56px;
             height: 34px;
             background: rgb(58, 118, 197);
@@ -370,27 +428,31 @@
             position: relative;
             color: #fff;
         }
-        .top6:hover{
+
+        .top6:hover {
             cursor: pointer;
             background-color: rgb(55, 81, 228);
         }
-        .pc5{
+
+        .pc5 {
             width: 45%;
             height: 100%;
             float: left;
             margin: 10px;
             min-width: 480px;
             min-height: 260px;
-            background:linear-gradient( 0deg,rgb(143, 140, 140) 0%,rgb(0, 0, 0) 50%) ;
+            background: linear-gradient(0deg, rgb(143, 140, 140) 0%, rgb(0, 0, 0) 50%);
             position: relative;
         }
+
         li {
             list-style: none;
         }
-		.m5 {
+
+        .m5 {
             filter: alpha(opacity=40);
-	        background-color: rgb(0, 0, 0);
-	        background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
             filter: alpha(opacity=40);
             height: 40px;
             width: 300px;
@@ -400,31 +462,36 @@
             top: 0px;
             left: 20px;
         }
+
         .m5 li {
             line-height: 1.8;
             color: rgb(216, 212, 212);
         }
+
         .m5:hover ul {
             cursor: pointer;
             animation: RST 10s 0.6s linear infinite;
         }
-        .pc6{
+
+        .pc6 {
             width: 45%;
             height: 100%;
             float: right;
             margin: 10px;
             min-width: 480px;
             min-height: 260px;
-            background:linear-gradient( 0deg,rgb(143, 140, 140) 0%,rgb(0, 0, 0) 50%) ;
+            background: linear-gradient(0deg, rgb(143, 140, 140) 0%, rgb(0, 0, 0) 50%);
             position: relative;
         }
+
         li {
             list-style: none;
         }
-		.m6 {
+
+        .m6 {
             filter: alpha(opacity=40);
-	        background-color: rgb(0, 0, 0);
-	        background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
             filter: alpha(opacity=40);
             height: 40px;
             width: 300px;
@@ -434,15 +501,18 @@
             top: 0px;
             left: 20px;
         }
+
         .m6 li {
             line-height: 1.8;
             color: rgb(216, 212, 212);
         }
+
         .m6:hover ul {
             cursor: pointer;
             animation: RST 10s 0.6s linear infinite;
         }
-        .zh5{
+
+        .zh5 {
             width: 100%;
             height: 50%;
             background: url(../images/huimg/r8.jpeg) no-repeat;
@@ -451,7 +521,8 @@
             min-height: 160px;
             margin: 12.5% auto;
         }
-        .zh6{
+
+        .zh6 {
             width: 100%;
             height: 50%;
             background: url(../images/huimg/r7.jpg) no-repeat;
@@ -461,16 +532,28 @@
             margin: 12.5% auto;
         }
 
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .s a:hover,
+        .s1 a:hover {
+            color: antiquewhite;
+        }
     </style>
 </head>
+
 <body>
     <div class="w">
-        <div class="s"><p>中华珍宝箱</p></div>
-        <div class="s">首页</div>
+        <div class="s">
+            <p>中华珍宝箱</p>
+        </div>
+        <div class="s"><a href="../index.html">首页</a> </div>
         <div class="s">精选馆</div>
         <div class="s">当代拾英</div>
         <div class="s">新发图</div>
-        <div class="s1">登录</div>
+        <div class="s1"><a href="denglu.html">登录</a></div>
     </div>
     <div>
         <div class="y1"></div>
@@ -478,8 +561,8 @@
             <form action="#">
                 <input type="text" name="" id="">
                 <span class="glyphicon glyphicon-search"></span>
-                <select name=""id="j">
-                    <option value=""selected>书画</option>
+                <select name="" id="j">
+                    <option value="" selected>书画</option>
                     <option value="">拾英计划</option>
                     <option value="">创作素材</option>
                     <option value="">书籍</option>
@@ -495,96 +578,114 @@
             <div class="top2">观赏更多…</div>
         </div>
         <div class="container">
-             <div class="pc1">
-                 <div class="zh1"></div>
-                 <div class="m1">
+            <div class="pc1">
+                <div class="zh1"></div>
+                <div class="m1">
                     <ul>
-                        <li><h4>《草堂消夏图》</h4></li>
+                        <li>
+                            <h4>《草堂消夏图》</h4>
+                        </li>
                         <li>南宋 佚名</li>
                         <li>著录书记:《宋画全集》第六卷第二册</li>
                         <li>此幅青山绿水多装饰趣味,树木与竹子有刻意安排的意图，人物又头大身小，或与钱选有一点的联系。</li>
                     </ul>
+                </div>
             </div>
-             </div>
-             <div class="pc2">
-                 <div class="zh2"></div>
-                 <div class="m2">
+            <div class="pc2">
+                <div class="zh2"></div>
+                <div class="m2">
                     <ul>
-                        <li><h4>《饮中八仙图卷》</h4></li>
+                        <li>
+                            <h4>《饮中八仙图卷》</h4>
+                        </li>
                         <li>明代 尤求</li>
                         <li>根据杜甫作品所作</li>
                         <li>行书诗二句：</li>
                         <li>“知章骑马似乘船，眼花落尽水底眠。”</li>
                     </ul>
-        </div>
-    </div>
-   <div>
-       <div>
-           <div class="top3">新发图</div>
-           <div class="top4">观赏更多…</div>
-       </div>
-       <div class="container1">
-            <div class="pc3">
-                <div class="zh3"></div>
-                <div class="m3">
-                    <ul>
-                        <li><h4>《虢国夫人游春图》</h4></li>
-                        <li>唐代 张萱</li>
-                        <li>现存的是宋代摹本</li>
-                        <li>此图描绘的是天宝十一年（752年）</li>
-                        <li>再现唐玄宗的宠妃杨玉环的三姊虢国夫人及其眷从盛装出游</li>
-                    </ul>
+                </div>
             </div>
-            </div>
-            <div class="pc4">
-                <div class="zh4"></div>
-                <div class="m4">
-                    <ul>
-                        <li><h4>《十六骏马图》</h4></li>
-                        <li>唐代 韩干</li>
-                        <li>卷前引首题“乾坤储骏”，款署“翠渠”</li>
-                        <li>继承了陈闳的画妈方法，又加以创新</li>
-                        <li>将马儿们画的就像是从天上下凡，达到出神入化的境界</li>
-                    </ul>
-            </div>
-       </div>
-   </div>
-   <div>
-    <div>
-        <div class="top5">当代拾英</div>
-        <div class="top6">观赏更多…</div>
-    </div>
-    <div class="container2">
-         <div class="pc5">
-             <div class="zh5"></div>
-             <div class="m5">
-                <ul>
-                    <li><h4>《步辇图》</h4></li>
-                    <li>唐朝 阎立本</li>
-                    <li>中国十大传世名画之一</li>
-                    <li>作品设色典雅绚丽，线条流畅圆劲，富有变化</li>
-                    <li>具有珍贵的历史和艺术价值。</li>
-                </ul>
-        </div>
-         </div>
-         <div class="pc6">
-             <div class="zh6"></div>
-             <div class="m6">
-                <ul>
-                    <li><h4>《簪花仕女图》</h4></li>
-                    <li>唐代 周昉</li>
-                    <li>设色画，现收藏于辽宁省博物馆</li>
-                    <li>是周昉贵族人物画风格的代表</li>
-                    <li>体现出贵族仕女养尊处优，无所事事，游戏于花蝶鹤犬之间的生活情态。</li>
-                </ul>
-        </div>
-    </div>
-</div>
+            <div>
+                <div>
+                    <div class="top3">新发图</div>
+                    <div class="top4">观赏更多…</div>
+                </div>
+                <div class="container1">
+                    <div class="pc3">
+                        <div class="zh3"></div>
+                        <div class="m3">
+                            <ul>
+                                <li>
+                                    <h4>《虢国夫人游春图》</h4>
+                                </li>
+                                <li>唐代 张萱</li>
+                                <li>现存的是宋代摹本</li>
+                                <li>此图描绘的是天宝十一年（752年）</li>
+                                <li>再现唐玄宗的宠妃杨玉环的三姊虢国夫人及其眷从盛装出游</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pc4">
+                        <div class="zh4"></div>
+                        <div class="m4">
+                            <ul>
+                                <li>
+                                    <h4>《十六骏马图》</h4>
+                                </li>
+                                <li>唐代 韩干</li>
+                                <li>卷前引首题“乾坤储骏”，款署“翠渠”</li>
+                                <li>继承了陈闳的画妈方法，又加以创新</li>
+                                <li>将马儿们画的就像是从天上下凡，达到出神入化的境界</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="top5">当代拾英</div>
+                        <div class="top6">观赏更多…</div>
+                    </div>
+                    <div class="container2">
+                        <div class="pc5">
+                            <div class="zh5"></div>
+                            <div class="m5">
+                                <ul>
+                                    <li>
+                                        <h4>《步辇图》</h4>
+                                    </li>
+                                    <li>唐朝 阎立本</li>
+                                    <li>中国十大传世名画之一</li>
+                                    <li>作品设色典雅绚丽，线条流畅圆劲，富有变化</li>
+                                    <li>具有珍贵的历史和艺术价值。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pc6">
+                            <div class="zh6"></div>
+                            <div class="m6">
+                                <ul>
+                                    <li>
+                                        <h4>《簪花仕女图》</h4>
+                                    </li>
+                                    <li>唐代 周昉</li>
+                                    <li>设色画，现收藏于辽宁省博物馆</li>
+                                    <li>是周昉贵族人物画风格的代表</li>
+                                    <li>体现出贵族仕女养尊处优，无所事事，游戏于花蝶鹤犬之间的生活情态。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-   <a href="footer.html"></a>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    <iframe src="footer.html" class="foot2" width="100%" height="342px" frameBorder="0" scrolling="no"></iframe>
+                    <a href="footer.html"></a>
+                    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+                        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+                        crossorigin="anonymous"></script>
+                    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+                        crossorigin="anonymous"></script>
+                    <iframe src="footer.html" class="foot2" width="100%" height="342px" frameBorder="0"
+                        scrolling="no"></iframe>
 </body>
+
 </html>

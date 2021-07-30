@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>欢迎登录</title>
     <style>
         * {
             margin: 0;
@@ -13,14 +13,21 @@
         }
 
         .top {
-            position: absolute;
+            position: relative;
             position: fixed;
             width: 40%;
             height: 30%;
             background: url("http://g2.ltfc.net/cag_icon.svg") no-repeat;
-            background-position-x: 40px;
-            background-position-y: 40px;
+            background-position-x: 10%;
+            background-position-y: 20%;
             background-size: 40% 30%;
+        }
+
+        .top h1 {
+            position: absolute;
+            color: #aaa;
+            top: 20%;
+            left: 50%;
         }
 
         .bac {
@@ -35,36 +42,191 @@
 
         .ma {
             position: absolute;
-            top: 10%;
+            top: 5%;
             right: 10%;
             width: 25%;
-            height: 60%;
-            border: 1px solid red;
+            height: 70%;
+            background-color: #fff;
         }
 
         .ma1 {
             width: 100%;
-            height: 80%;
-            border: 1px solid red;
+            height: 85%;
         }
 
         .ma2 {
+            position: relative;
             width: 100%;
-            height: 20%;
-            border: 1px solid pink;
+            height: 15%;
+            line-height: 100%;
+
+        }
+
+        .ma2 .weixin {
+            position: relative;
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+
+        .weixin a,
+        .app a {
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            text-decoration: none;
+            color: #aaa;
+        }
+
+        a:hover {
+            color: rgb(240, 183, 60)
+        }
+
+        .weixin::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 20%;
+            top: 20%;
+            width: 40%;
+            height: 70%;
+            background: url("../images/huimg/weixin.png") no-repeat;
+            background-size: 40% 70%;
+        }
+
+        .ma2 .app {
+            position: relative;
+            float: right;
+            width: 50%;
+            height: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .ma1 li {
+            float: left;
+        }
+
+        input {
+            display: none;
+        }
+
+        .shou1 {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            display: none;
+            width: 80%;
+            height: 65%;
+            background: url("../images/huimg/shou.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .ma1 li:nth-child(1) input:checked~.shou1 {
+            display: block;
+        }
+
+        .ma1 li:nth-child(2) input:checked~.sao1 {
+            display: block;
+        }
+
+
+        label {
+            text-align: center;
+            line-height: 60px;
+            display: block;
+            width: 190px;
+            height: 60px;
+            font-size: larger;
+            color: burlywood;
+        }
+
+        label:hover {
+            color: rgb(241, 170, 36);
+            border-bottom: 2px solid rgb(241, 170, 36);
+        }
+
+        .sao1 {
+            position: absolute;
+            z-index: 2;
+            top: 15%;
+            left: 10%;
+            display: none;
+            width: 80%;
+            height: 65%;
+        }
+
+        .sao1 input {
+            display: block;
+            text-indent: 1em;
+        }
+
+        input:nth-child(1) {
+            position: relative;
+            width: 100%;
+            height: 12%;
+            top: 10%;
+        }
+
+        input:nth-child(2) {
+            position: relative;
+            width: 65%;
+            height: 12%;
+            top: 24%;
+        }
+
+        input:nth-child(3) {
+            position: relative;
+            width: 30%;
+            top: 10%;
+            height: 14%;
+            right: -70%;
+        }
+
+        input:nth-child(4) {
+            position: relative;
+            left: 10%;
+            width: 80%;
+            height: 12%;
+            top: 20%;
+            background-color: rgb(233, 152, 59);
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div class="top"></div>
+    <a href="../index.html">
+        <div class="top">
+            <h1>欢迎登录</h1>
+        </div>
+    </a>
     <div class="bac">
         <div class="ma">
             <div class="ma1">
-
+                <ul>
+                    <li>
+                        <input type="radio" name="pic" id="shou" checked>
+                        <label for="shou">手机登录</label>
+                        <div class="shou1"></div>
+                    </li>
+                    <li>
+                        <input type="radio" name="pic" id="sao">
+                        <label for="sao">扫码登录</label>
+                        <div class="sao1">
+                            <input type="text" class="tel" placeholder="请输入手机号">
+                            <input type="text" class="mima" placeholder="请输入密码">
+                            <input type="button" value="获取验证码">
+                            <input type="button" name="btn" value="登录">
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="ma2">
-
+                <div class="weixin"><a href="">微信登录</a></div>
+                <div class="app"><a href="">下载App</a></div>
             </div>
         </div>
     </div>
