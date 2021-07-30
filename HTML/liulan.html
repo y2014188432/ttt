@@ -489,7 +489,23 @@
         .x4{
             background:url(../images/xf/4.png) ;
         }
-
+        .x1:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        .x2:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        .x3:hover:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        .x4:hover{
+              transform:rotateX(180deg);
+              transition: all 2s;
+        }
+        
     </style>
 </head>
 <body>
@@ -780,10 +796,10 @@
                 </div>
             <div class="XF">
                 <p class="x">西方艺术</p> 
-                <div class="x1"></div>
-                <div class="x2"></div>
-                <div class="x3"></div>
-                <div class="x4"></div>
+                    <div class="x1"></div>
+                    <div class="x2"></div>
+                    <div class="x3"></div>
+                    <div class="x4"></div>
                 <a>.......</a>
             </div>
             </div>
@@ -823,19 +839,14 @@
     var imgbox2 = document.getElementsByClassName("img-slide2");
     len = imgbox2.length;
     imgbox2[index].style.display = 'block';
-    // 逻辑控制函数
     function slideShow() {
         index ++;
-        // 防止数组溢出
         if(index >= len) index = 0;
-        // 遍历每一个元素
         for(var i=0; i<len; i++) {
             imgbox2[i].style.display = 'none';
         }
-        // 每次只有一张图片显示
         imgbox2[index].style.display = 'block';
     }
-    // 定时器，间隔1s切换图片
     setInterval(slideShow, 1000);
 
 </script>
@@ -844,19 +855,14 @@ var index = 0, len;
 var imgbox3 = document.getElementsByClassName("img-slide3");
 len = imgbox3.length;
 imgbox3[index].style.display = 'block';
-// 逻辑控制函数
 function slideShow() {
     index ++;
-    // 防止数组溢出
     if(index >= len) index = 0;
-    // 遍历每一个元素
     for(var i=0; i<len; i++) {
         imgbox3[i].style.display = 'none';
     }
-    // 每次只有一张图片显示
     imgbox3[index].style.display = 'block';
     }
-     // 定时器，间隔1s切换图片
     setInterval(slideShow, 1000);
 </script>
 <script>
@@ -864,19 +870,14 @@ function slideShow() {
 var imgbox4 = document.getElementsByClassName("img-slide4");
 len = imgbox4.length;
 imgbox4[index].style.display = 'block';
-// 逻辑控制函数
 function slideShow() {
     index ++;
-    // 防止数组溢出
     if(index >= len) index = 0;
-    // 遍历每一个元素
     for(var i=0; i<len; i++) {
         imgbox4[i].style.display = 'none';
     }
-    // 每次只有一张图片显示
     imgbox4[index].style.display = 'block';
     }
-    // 定时器，间隔1s切换图片
     setInterval(slideShow, 2000);
     
     </script>
