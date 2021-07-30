@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <script src="./JS/jquery-3.6.0.js"></script>
     <title>浏览作品</title>
     <style>
-       *{
-              margin: 0;
-              padding: 0;
-    }
-        html,body{
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
             font-family: '微软雅黑';
-            
+
         }
-        .top {
+
+        /* .top {
             position: fixed;
             width: 100%;
             height: 60px;
@@ -201,271 +206,324 @@
 
         a {
             text-decoration: none;
+        } */
+
+        .head2 {
+            position: fixed;
+            top: 0px;
+            z-index: 9;
         }
+
         .foot2 {
-            position:relative;
+            position: relative;
             top: 950px;
-            
         }
-        .main{
+
+        .main {
             width: 1400px;
-            height:3000px;
+            height: 3000px;
             background: cornsilk;
             margin: 1px auto;
             position: relative;
-            top:50px ;
+            top: 50px;
         }
-        .outer{
-            width:1400px;
+
+        .outer {
+            width: 1400px;
             height: 2900px;
-            font-size:20px;
+            font-size: 20px;
             line-height: 50px;
             margin: 1px auto;
         }
-        .tit{
+
+        .tit {
             width: 400px;
-            height:200px;
-            margin:10px auto;
+            height: 200px;
+            margin: 10px auto;
             /* border: 1px solid red; */
         }
-        ul{
+
+        ul {
             list-style: none;
         }
-        h2{
+
+        h2 {
             width: 200px;
             height: 100px;
-            font-size:40px;
+            font-size: 40px;
             line-height: 100px;
-            font-family: '黑体' ;
+            font-family: '黑体';
             text-align: center;
             align-items: center;
             margin: 10px auto;
         }
-   
-        .inner{
-              width: 400px;
-              height: 50px;
-              line-height: 50px;
-              margin: 10px auto;
-              text-align: center;
+
+        .inner {
+            width: 450px;
+            height: 50px;
+            line-height: 50px;
+            margin: 10px auto;
+            text-align: center;
         }
-        .inner li{
-              width: 90px;
-              font-size: 20px;
-              float: left;
-              margin-left: 10px;          
-        } 
-        .inner li:hover{
+
+        .inner li {
+            width: 90px;
+            font-size: 20px;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .inner li:hover {
             color: rgb(255, 200, 80);
             /* font-size: 22px; */
             cursor: default;
-            border-bottom: 2px solid  rgb(255, 200, 80);
+            border-bottom: 2px solid rgb(255, 200, 80);
             transition: 0.2s all linear;
         }
-        label{
-             width: 50px;
-             height: 20px;
-             cursor: pointer;
-             transition: 0.5s;
-            }
-        .box{
+
+        label {
+            width: 80px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .box {
             width: 600px;
             height: 100px;
-            margin:10px auto;
+            margin: 10px auto;
             position: absolute;
             left: 400px;
             top: 150px;
             display: none;
         }
-        .box1{
+
+        .box1 {
             width: 600px;
             height: 100px;
-            margin:10px auto;
+            margin: 10px auto;
             position: absolute;
             left: 400px;
             top: 150px;
             display: none;
         }
-        .box p{
+
+        .box p {
             font-size: 15px;
             float: left;
             margin-right: 15px;
         }
-        .box1 p{
+
+        .box1 p {
             font-size: 15px;
             float: left;
             margin-right: 15px;
         }
-        #r1:checked+.box {
+
+        .tit li:nth-child(2) input:checked~.box {
             display: block;
-           
         }
-        #r2:checked+.box1 {
+
+        .tit li:nth-child(3) input:checked~.box1 {
             display: block;
-           
         }
-        .sousuo{
+
+        .sousuo {
             width: 400px;
             height: 100px;
-            margin:20px auto;
-            /* position: absolute; */
+            margin: 20px auto;
         }
-        .user-input { 
+
+        .user-input {
             width: 360px;
             height: 30px;
             border: 2px solid #eee;
-            border-radius: 5px; 
-            box-sizing: border-box; 
-            outline: none; 
-            text-indent: 10px; 
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            text-indent: 10px;
         }
-        span{
-             width: 30px;
-             height: 30px;
-             border: 5px solid transparent;
-             color: rgb(218, 215, 215);
+
+        span {
+            width: 30px;
+            height: 30px;
+            border: 5px solid transparent;
+            color: rgb(218, 215, 215);
         }
-        .ant-spin{
-             width: 1200px;
-             height: 2300px;
-             margin: 10px auto;
+
+        .ant-spin {
+            width: 1200px;
+            height: 2300px;
+            margin: 10px auto;
         }
-        .ant-span-1{
+
+        .ant-span-1 {
             width: 1200px;
             height: 840px;
             /* background: cyan; */
-            margin:10px auto;
-           
+            margin: 10px auto;
+
         }
-        .boundary{
+
+        .boundary {
             width: 1199px;
             height: 50px;
-            border-bottom:3px solid #eee;
+            border-bottom: 3px solid #eee;
             /* background: #eee; */
         }
-        .z1{
+
+        .z1 {
             width: 150px;
             height: 40px;
             float: left;
             color: #000;
             font-size: 23px;
-            line-height:40px ;
+            line-height: 40px;
             margin-left: 10px;
-        }  
-        .renwu1 ,.renwu2{
+        }
+
+        .renwu1,
+        .renwu2 {
             position: relative;
             width: 1200px;
             height: 380px;
             /* background: darkgrey; */
-     
+
         }
-    
-        .GKZ,.YLB{
-             width: 50%;
-             height: 360px;
-             float: left;
+
+        .GKZ,
+        .YLB {
+            width: 50%;
+            height: 360px;
+            float: left;
         }
-        .LSX,.WDZ{
-             width: 50%;
-             height: 360px;
-             float: right;
+
+        .LSX,
+        .WDZ {
+            width: 50%;
+            height: 360px;
+            float: right;
         }
-        .p1 ,.p2,.p3,.p4{
+
+        .p1,
+        .p2,
+        .p3,
+        .p4 {
             width: 100px;
             height: 50px;
             line-height: 50px;
             text-align: center;
             font-size: 25px;
             color: cadetblue;
-            font-family:'微软雅黑';
-            margin: 10px  auto;
+            font-family: '微软雅黑';
+            margin: 10px auto;
         }
+
         .img {
             width: 500px;
-            height:275px;
+            height: 275px;
             margin: 0 auto;
             display: none;
             margin: 10px auto;
         }
-        .imgbox1,.imgbox2,.imgbox3,.imgbox4 {
+
+        .imgbox1,
+        .imgbox2,
+        .imgbox3,
+        .imgbox4 {
             border-top: 2px solid cadetblue;
             width: 520px;
             height: 320px;
             margin: 0 auto;
         }
-        p:hover{
+
+        p:hover {
             font-size: 25px;
             color: rgb(255, 200, 80);
             transition: 0.2s all linear;
             cursor: default;
             border-bottom: 2px solid rgb(255, 200, 80);
         }
-        .ant-span-2{
-            width:1200px;
+
+        .ant-span-2 {
+            width: 1200px;
             height: 500px;
-        }  
-        .wenzhang{
+        }
+
+        .wenzhang {
             width: 1200px;
             height: 450px;
             float: left;
         }
-        .w1{
-            width:50px;
-            height:40px;
+
+        .w1 {
+            width: 50px;
+            height: 40px;
             font-size: 20px;
             margin-left: 15px;
         }
-     
-      
-        .right-banner1, .right-banner2 ,.right-banner3{
-            height:450px;
+
+
+        .right-banner1,
+        .right-banner2,
+        .right-banner3 {
+            height: 450px;
             width: 100%;
             margin: auto;
-           
-        } 
-    
-        #carousel-example-generic1 ,#carousel-example-generic2,#carousel-example-generic3 {
-            width: 100%;
-            height:400px;
-            float: center;
-    
+
         }
-    
+
+        #carousel-example-generic1,
+        #carousel-example-generic2,
+        #carousel-example-generic3 {
+            width: 100%;
+            height: 400px;
+            float: center;
+
+        }
+
         #carousel-example-generic1 img {
             width: 500px;
             height: 400px;
             margin: 1px auto;
         }
-        
+
         #carousel-example-generic2 img {
             width: 500px;
             height: 395px;
             margin: 0px auto;
         }
+
         #carousel-example-generic3 img {
             width: 500px;
             height: 395px;
             margin: 0px auto;
         }
-        .carousel-caption{
+
+        .carousel-caption {
             font-size: 15px;
             color: blanchedalmond;
             position: absolute;
             top: 250px;
         }
-        .shufa{
-              width: 1200px;
-              height: 450px;
-              float: right;
+
+        .shufa {
+            width: 1200px;
+            height: 450px;
+            float: right;
         }
-        .XF{
+
+        .XF {
             width: 1100px;
             height: 300px;
             float: left;
             /* border: 1px solid red; */
-            margin:20px auto;
-        } 
-        .x1, .x2, .x3, .x4{
+            margin: 20px auto;
+        }
+
+        .x1,
+        .x2,
+        .x3,
+        .x4 {
             width: 200px;
             height: 200px;
             border: 1px solid #000;
@@ -473,43 +531,56 @@
             float: left;
             margin: 30px;
         }
-        .XF a{
+
+        .XF a {
             font-size: 20px;
             float: right;
         }
-        .x1{
-            background:url(../images/xf/1.png) ;
+
+        .x1 {
+            background: url(../images/xf/1.png);
         }
-        .x2{
-            background:url(../images/xf/2.png) ;
+
+        .x2 {
+            background: url(../images/xf/2.png);
         }
-        .x3{
-            background:url(../images/xf/3.png) ;
+
+        .x3 {
+            background: url(../images/xf/3.png);
         }
-        .x4{
-            background:url(../images/xf/4.png) ;
+
+        .x4 {
+            background: url(../images/xf/4.png);
         }
-        .x1:hover{
-              transform:rotateX(180deg);
-              transition: all 2s;
+
+        .x1:hover {
+            transform: rotateX(180deg);
+            transition: all 2s;
         }
-        .x2:hover{
-              transform:rotateX(180deg);
-              transition: all 2s;
+
+        .x2:hover {
+            transform: rotateX(180deg);
+            transition: all 2s;
         }
-        .x3:hover:hover{
-              transform:rotateX(180deg);
-              transition: all 2s;
+
+        .x3:hover:hover {
+            transform: rotateX(180deg);
+            transition: all 2s;
         }
-        .x4:hover{
-              transform:rotateX(180deg);
-              transition: all 2s;
+
+        .x4:hover {
+            transform: rotateX(180deg);
+            transition: all 2s;
         }
-        
+
+        .tit input {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
-    <header class="top">
+    <!-- <header class="top">
         <div id="liebiao">
             <div class="lie">
                 <ul>
@@ -534,7 +605,7 @@
             <input type="button" id="sou" name="shousuo">
         </div>
         <div class="topright">
-            <a href="">登录</a>
+            <a href="./denglu.html">登录</a>
             <a href="">
                 <img src="../images/huimg/lengdang.png">
             </a>
@@ -542,272 +613,312 @@
             <a href="">浏览作品</a>
             <a href="">首页</a>
         </div>
-    </header>
+    </header> -->
+    <!-- <a href="head.html"></a> -->
+    <iframe src="head.html" class="head2" width="100%" height="62px" frameBorder="0" scrolling="no"></iframe>
+    <iframe src="xiala.html" class="head2" width="300px" height="100%" frameBorder="0" scrolling="no"></iframe>
     <div class="main">
         <div class="outer">
             <div class="tit">
                 <h2>人物&作品</h2>
                 <ul>
                     <div class="inner">
-                       <li><input type="radio" name="r" id="r0" checked>全部
-                       </li>
-                       <li><input type="radio" name="r" id="r1">拼音A-Z
-                        <div class="box">
-                            <p >A</p><p>B</p><p>C</p><p>D</p><p>E</p><p>F</p><p>G</p><p>H</p><p>I</p><p>G</p><p>K</p><p>L</p><p>M</p><p>N</p><p>O</p><p>P</p><p>Q</p><p>R</p><p>S</p><p>T</p><p>U</p><p>V</p><p>W</p>
-                        </div>
-                       </li>
-                       <li><input type="radio" name="r"  id="r2">年代
-                        <div class="box1">
-                        <p>先秦</p><p>汉</p><p>魏晋南北朝</p><p>宋</p><p>五代十国</p><p>元</p>明<P>清</P><P>当代 </P>
-                        </div>
-                       </li>
-                       <li>分类</li>
+                        <li><input type="radio" name="r" id="r0" checked><label for="r0">全部</label>
+                        </li>
+                        <li><input type="radio" name="r" id="r1"><label for="r1">拼音A-Z</label>
+                            <div class="box">
+                                <p>A</p>
+                                <p>B</p>
+                                <p>C</p>
+                                <p>D</p>
+                                <p>E</p>
+                                <p>F</p>
+                                <p>G</p>
+                                <p>H</p>
+                                <p>I</p>
+                                <p>G</p>
+                                <p>K</p>
+                                <p>L</p>
+                                <p>M</p>
+                                <p>N</p>
+                                <p>O</p>
+                                <p>P</p>
+                                <p>Q</p>
+                                <p>R</p>
+                                <p>S</p>
+                                <p>T</p>
+                                <p>U</p>
+                                <p>V</p>
+                                <p>W</p>
+                            </div>
+                        </li>
+                        <li><input type="radio" name="r" id="r2"><label for="r2">年代</label>
+                            <div class="box1">
+                                <p>先秦</p>
+                                <p>汉</p>
+                                <p>魏晋南北朝</p>
+                                <p>宋</p>
+                                <p>五代十国</p>
+                                <p>元</p>明<P>清</P>
+                                <P>当代 </P>
+                            </div>
+                        </li>
+                        <li>分类</li>
                     </div>
-                </ul>  
+                </ul>
             </div>
             <div class="sousuo">
                 <input class="user-input" type="text" name="search" placeholder="请输入艺术家名称，或者拼音简码">
-                <span class="glyphicon glyphicon-search" checked></span> 
+                <span class="glyphicon glyphicon-search" checked></span>
             </div>
             <div class="ant-spin">
                 <div class="ant-span-1">
                     <div class="boundary">
                         <p class="z1">著名画家</p>
                     </div>
-                <div class="renwu1">
-                    <div class="GKZ">
-                        <p class="p1"><strong>顾恺之</strong></p>   
-                        <div class="imgbox1">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz1.jpg" alt="img1">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz2.jpg" alt="img2">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz3.jpg" alt="img3">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz4.jpg" alt="img4">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz5.jpg" alt="img5">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz6.jpg" alt="img6">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz7.jpg" alt="img7">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz8.jpg" alt="img8">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz9.jpg" alt="img9">
-                            <img class="img-slide1 img" src="../images/huimg/gkz/gkz10.jpg" alt="img10">
+                    <div class="renwu1">
+                        <div class="GKZ">
+                            <p class="p1"><strong>顾恺之</strong></p>
+                            <div class="imgbox1">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz1.jpg" alt="img1">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz2.jpg" alt="img2">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz3.jpg" alt="img3">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz4.jpg" alt="img4">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz5.jpg" alt="img5">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz6.jpg" alt="img6">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz7.jpg" alt="img7">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz8.jpg" alt="img8">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz9.jpg" alt="img9">
+                                <img class="img-slide1 img" src="../images/huimg/gkz/gkz10.jpg" alt="img10">
+                            </div>
+                        </div>
+                        <div class="LSX">
+                            <p class="p2"><strong>李思训</strong></p>
+                            <div class="imgbox2">
+                                <img class="img-slide2 img" src="../images/huimg/lsx/lxs1.jpg" alt="img1">
+                                <img class="img-slide2 img" src="../images/huimg/lsx/lsx2.jpg" alt="img2">
+                                <img class="img-slide2 img" src="../images/huimg/lsx/lsx3.jpg" alt="img3">
+                                <img class="img-slide2 img" src="../images/huimg/lsx/lsx4.jpg" alt="img4">
+                                <img class="img-slide2 img" src="../images/huimg/lsx/lsx5.jpg" alt="img5">
+                                <img class="img-slide2 img" src="../images/huimg/lsx/lsx6.jpg" alt="img6">
+                            </div>
                         </div>
                     </div>
-                    <div class="LSX">
-                        <p class="p2"><strong>李思训</strong></p>   
-                        <div class="imgbox2">
-                            <img class="img-slide2 img" src="../images/huimg/lsx/lxs1.jpg" alt="img1">
-                            <img class="img-slide2 img" src="../images/huimg/lsx/lsx2.jpg" alt="img2">
-                            <img class="img-slide2 img" src="../images/huimg/lsx/lsx3.jpg" alt="img3">
-                            <img class="img-slide2 img" src="../images/huimg/lsx/lsx4.jpg" alt="img4">
-                            <img class="img-slide2 img" src="../images/huimg/lsx/lsx5.jpg" alt="img5">
-                            <img class="img-slide2 img" src="../images/huimg/lsx/lsx6.jpg" alt="img6">
+                    <div class="renwu2">
+                        <div class="YLB">
+                            <p class="p1"><strong>阎立本</strong></p>
+                            <div class="imgbox3">
+                                <img class="img-slide3 img" src="../images/huimg/ylb/ylb1.jpg" alt="img1">
+                                <img class="img-slide3 img" src="../images/huimg/ylb/ylb2.jpg" alt="img2">
+                                <img class="img-slide3 img" src="../images/huimg/ylb/ylb3.jpg" alt="img3">
+                                <img class="img-slide3 img" src="../images/huimg/ylb/ylb4.jpg" alt="img4">
+                                <img class="img-slide3 img" src="../images/huimg/ylb/ylb5.jpg" alt="img5">
+                            </div>
                         </div>
-                    </div>  
-                </div>
-                <div class="renwu2">
-                    <div class="YLB">
-                        <p class="p1"><strong>阎立本</strong></p>   
-                        <div class="imgbox3">
-                            <img class="img-slide3 img" src="../images/huimg/ylb/ylb1.jpg" alt="img1">
-                            <img class="img-slide3 img" src="../images/huimg/ylb/ylb2.jpg" alt="img2">
-                            <img class="img-slide3 img" src="../images/huimg/ylb/ylb3.jpg" alt="img3">
-                            <img class="img-slide3 img" src="../images/huimg/ylb/ylb4.jpg" alt="img4">
-                            <img class="img-slide3 img" src="../images/huimg/ylb/ylb5.jpg" alt="img5">
+                        <div class="WDZ">
+                            <p class="p2"><strong>吴道子</strong></p>
+                            <div class="imgbox4">
+                                <img class="img-slide4 img" src="../images/huimg/wdz/wdz1.jpg" alt="img1">
+                                <img class="img-slide4 img" src="../images/huimg/wdz/wdz2.jpg" alt="img2">
+                                <img class="img-slide4 img" src="../images/huimg/wdz/wdz3.jpg" alt="img3">
+                                <img class="img-slide4 img" src="../images/huimg/wdz/wdz4.jpg" alt="img4">
+                            </div>
                         </div>
                     </div>
-                    <div class="WDZ">
-                        <p class="p2"><strong>吴道子</strong></p>   
-                        <div class="imgbox4">
-                            <img class="img-slide4 img" src="../images/huimg/wdz/wdz1.jpg" alt="img1">
-                            <img class="img-slide4 img" src="../images/huimg/wdz/wdz2.jpg" alt="img2">
-                            <img class="img-slide4 img" src="../images/huimg/wdz/wdz3.jpg" alt="img3">
-                            <img class="img-slide4 img" src="../images/huimg/wdz/wdz4.jpg" alt="img4">
+                    <div class="ant-span-2">
+                        <div class="boundary">
+                            <p class="z1">特色专栏</p>
                         </div>
-                    </div>  
-                </div>
-                <div class="ant-span-2">
-                    <div class="boundary">
-                    <p class="z1">特色专栏</p>
-                    </div>
-                    <div class="wenzhang">
-                        <p class="w1">文章</p>
-                        <div class="w2">
-                            <div class="right-banner1">
-                                <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                             <img src="../images/wenzhang/1.png" alt="...">
-                                             <div class="carousel-caption">
-                                                节气|大寒·雪中人<br>
-                                                作者 发现君
+                        <div class="wenzhang">
+                            <p class="w1">文章</p>
+                            <div class="w2">
+                                <div class="right-banner1">
+                                    <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="../images/wenzhang/1.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    节气|大寒·雪中人<br>
+                                                    作者 发现君
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/wenzhang/2.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    东方与西方，骑马的女人<br>
+                                                    作者
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/wenzhang/3.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    发现|宋元最美花瓶<br>
+                                                    作者 发现君
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/wenzhang/4.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    你是不是又错过了几个亿
+                                                </div>
                                             </div>
                                         </div>
-                                    <div class="item">
-                                        <img src="../images/wenzhang/2.png" alt="...">
-                                        <div class="carousel-caption">
-                                           东方与西方，骑马的女人<br>
-                                           作者
-                                        </div>
+                                        <a class="left carousel-control" href="#carousel-example-generic1" role="button"
+                                            data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-example-generic1"
+                                            role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
                                     </div>
-                                    <div class="item">
-                                        <img src="../images/wenzhang/3.png" alt="...">
-                                        <div class="carousel-caption">
-                                            发现|宋元最美花瓶<br>
-                                            作者 发现君
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shufa">
+                            <p class="w1">书法</p>
+                            <div class="w2">
+                                <div class="right-banner2">
+                                    <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="../images/sufa/1.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    元 赵孟頫<br>
+                                                    小楷黄庭经卷
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/sufa/2.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    元 赵孟頫<br>
+                                                    泥金书孝经卷
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/sufa/3.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    元 赵孟頫<br>
+                                                    胆巴碑
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/sufa/4.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    南宋 张即之<br>
+                                                    楷书度人经帖
+
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/sufa/5.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    唐 钟绍京<br>
+                                                    小楷灵飞长卷
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../images/sufa/6.png" alt="...">
+                                                <div class="carousel-caption">
+                                                    唐 褚遂良<br>
+                                                    倪宽赞
+                                                </div>
+                                            </div>
                                         </div>
+                                        <a class="left carousel-control" href="#carousel-example-generic2" role="button"
+                                            data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-example-generic2"
+                                            role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
                                     </div>
-                                    <div class="item">
-                                        <img src="../images/wenzhang/4.png" alt="...">
-                                        <div class="carousel-caption">
-                                            你是不是又错过了几个亿
+                                </div>
+                            </div>
+                            <div class="shufa">
+                                <p class="w4">文物</p>
+                                <div class="w2">
+                                    <div class="right-banner3">
+                                        <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner" role="listbox">
+                                                <div class="item active">
+                                                    <img src="../images/sufa/gy1.png" alt="...">
+                                                    <div class="carousel-caption">
+                                                        六口蓝花瓶
+
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="../images/sufa/gy2.png" alt="...">
+                                                    <div class="carousel-caption">
+                                                        青花丛瓶
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="../images/sufa/gy3.png" alt="...">
+                                                    <div class="carousel-caption">
+                                                        青花釉里红烟瓶
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="../images/sufa/gy4.png" alt="...">
+                                                    <div class="carousel-caption">
+                                                        元 西元14世纪<br>
+                                                        月白青瓷瓶
+
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="../images/sufa/gy5.png" alt="...">
+                                                    <div class="carousel-caption">
+                                                        元 西元14世纪<br>
+                                                        月白青瓷葵口盘
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="../images/sufa/gy6.png" alt="...">
+                                                    <div class="carousel-caption">
+                                                        元 西元14世纪<br>
+                                                        月白青瓷葵口碟
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="left carousel-control" href="#carousel-example-generic3"
+                                                role="button" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"
+                                                    aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" href="#carousel-example-generic3"
+                                                role="button" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"
+                                                    aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
+                            </div>
+                            <div class="XF">
+                                <p class="x">西方艺术</p>
+                                <div class="x1"></div>
+                                <div class="x2"></div>
+                                <div class="x3"></div>
+                                <div class="x4"></div>
+                                <a>.......</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="shufa">
-                    <p class="w1">书法</p>
-                    <div class="w2">
-                        <div class="right-banner2">
-                            <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <img src="../images/sufa/1.png" alt="...">
-                                        <div class="carousel-caption">
-                                            元 赵孟頫<br>
-                                            小楷黄庭经卷
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/2.png" alt="...">
-                                        <div class="carousel-caption">
-                                           元  赵孟頫<br>
-                                           泥金书孝经卷
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/3.png" alt="...">
-                                        <div class="carousel-caption">
-                                            元 赵孟頫<br>
-                                            胆巴碑
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/4.png" alt="...">
-                                        <div class="carousel-caption">
-                                            南宋 张即之<br>
-                                            楷书度人经帖
-                                
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/5.png" alt="...">
-                                        <div class="carousel-caption">
-                                           唐 钟绍京<br>
-                                           小楷灵飞长卷
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/6.png" alt="...">
-                                        <div class="carousel-caption">
-                                          唐 褚遂良<br>
-                                          倪宽赞
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                <div class="shufa">
-                    <p class="w4">文物</p>
-                    <div class="w2">
-                        <div class="right-banner3">
-                            <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <img src="../images/sufa/gy1.png" alt="...">
-                                        <div class="carousel-caption">
-                                            六口蓝花瓶
-                            
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/gy2.png" alt="...">
-                                        <div class="carousel-caption">
-                                        青花丛瓶
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/gy3.png" alt="...">
-                                        <div class="carousel-caption">
-                                        青花釉里红烟瓶
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/gy4.png" alt="...">
-                                        <div class="carousel-caption">
-                                           元 西元14世纪<br>
-                                           月白青瓷瓶
-                                
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/gy5.png" alt="...">
-                                        <div class="carousel-caption">
-                                           元 西元14世纪<br>
-                                          月白青瓷葵口盘
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="../images/sufa/gy6.png" alt="...">
-                                        <div class="carousel-caption">
-                                         元 西元14世纪<br>
-                                          月白青瓷葵口碟
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="left carousel-control" href="#carousel-example-generic3" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic3" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <div class="XF">
-                <p class="x">西方艺术</p> 
-                    <div class="x1"></div>
-                    <div class="x2"></div>
-                    <div class="x3"></div>
-                    <div class="x4"></div>
-                <a>.......</a>
-            </div>
-            </div>
-        </div>
-    </div>
- <footer>
-    <iframe src="./footer.html" class="foot2" width="100%" height="342px" frameBorder="0" scrolling="no"></iframe>  
- </footer>
+                <footer>
+                    <iframe src="./footer.html" class="foot2" width="100%" height="342px" frameBorder="0"
+                        scrolling="no"></iframe>
+                </footer>
 </body>
 
 
@@ -822,27 +933,27 @@
     imgbox1[index].style.display = 'block';
     // 逻辑控制函数
     function slideShow() {
-        index ++;
+        index++;
         // 防止数组溢出
-        if(index >= len) index = 0;
+        if (index >= len) index = 0;
         // 遍历每一个元素
-        for(var i=0; i<len; i++) {
+        for (var i = 0; i < len; i++) {
             imgbox1[i].style.display = 'none';
         }
         // 每次只有一张图片显示
         imgbox1[index].style.display = 'block';
-        }
-         // 定时器，间隔1s切换图片
-        setInterval(slideShow, 2000);
+    }
+    // 定时器，间隔1s切换图片
+    setInterval(slideShow, 2000);
 </script>
 <script>
     var imgbox2 = document.getElementsByClassName("img-slide2");
     len = imgbox2.length;
     imgbox2[index].style.display = 'block';
     function slideShow() {
-        index ++;
-        if(index >= len) index = 0;
-        for(var i=0; i<len; i++) {
+        index++;
+        if (index >= len) index = 0;
+        for (var i = 0; i < len; i++) {
             imgbox2[i].style.display = 'none';
         }
         imgbox2[index].style.display = 'block';
@@ -851,50 +962,55 @@
 
 </script>
 <script>
-var index = 0, len;
-var imgbox3 = document.getElementsByClassName("img-slide3");
-len = imgbox3.length;
-imgbox3[index].style.display = 'block';
-function slideShow() {
-    index ++;
-    if(index >= len) index = 0;
-    for(var i=0; i<len; i++) {
-        imgbox3[i].style.display = 'none';
-    }
+    var index = 0, len;
+    var imgbox3 = document.getElementsByClassName("img-slide3");
+    len = imgbox3.length;
     imgbox3[index].style.display = 'block';
+    function slideShow() {
+        index++;
+        if (index >= len) index = 0;
+        for (var i = 0; i < len; i++) {
+            imgbox3[i].style.display = 'none';
+        }
+        imgbox3[index].style.display = 'block';
     }
     setInterval(slideShow, 1000);
 </script>
 <script>
 
-var imgbox4 = document.getElementsByClassName("img-slide4");
-len = imgbox4.length;
-imgbox4[index].style.display = 'block';
-function slideShow() {
-    index ++;
-    if(index >= len) index = 0;
-    for(var i=0; i<len; i++) {
-        imgbox4[i].style.display = 'none';
-    }
+    var imgbox4 = document.getElementsByClassName("img-slide4");
+    len = imgbox4.length;
     imgbox4[index].style.display = 'block';
+    function slideShow() {
+        index++;
+        if (index >= len) index = 0;
+        for (var i = 0; i < len; i++) {
+            imgbox4[i].style.display = 'none';
+        }
+        imgbox4[index].style.display = 'block';
     }
     setInterval(slideShow, 2000);
-    
-    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    
+</script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
-  
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+
 
 </body>
+
 </html>
